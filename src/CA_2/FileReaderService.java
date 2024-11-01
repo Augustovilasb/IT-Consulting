@@ -3,12 +3,23 @@ package CA_2;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class FileReaderService {
 
     public Employee[] readFile() throws IOException {
 
-        BufferedReader buffRead = new BufferedReader(new FileReader("src/CA_2/Applicants_Form.txt"));
+        InputStream inputStream = Main.class.getResourceAsStream("/Applicants_Form.txt");
+
+        if (inputStream == null) {
+            throw new IOException("File not found out: Applicants_Form.txt");
+        }
+
+        BufferedReader buffRead = new BufferedReader(new InputStreamReader(inputStream));
+
+       // BufferedReader buffRead = new BufferedReader(new FileReader("src/CA_2/Applicants_Form.txt"));
+
         String line = "";
 
         int countLines = 0;
