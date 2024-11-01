@@ -1,6 +1,6 @@
 package CA_2;
 
-public  enum MenuItemsEnum {
+public  enum MenuEnum {
 
     SORT(11, "Sort"),
     SEARCH(12, "Search"),
@@ -22,7 +22,7 @@ public  enum MenuItemsEnum {
     private final int key;
     private final String description;
 
-    MenuItemsEnum(int key, String description) {
+    MenuEnum(int key, String description) {
         this.key = key;
         this.description = description;
     }
@@ -34,8 +34,8 @@ public  enum MenuItemsEnum {
         return description; //
     }
 
-    public static MenuItemsEnum fromKey(int key) {
-        for (MenuItemsEnum status: MenuItemsEnum.values()) {
+    public static MenuEnum fromKey(int key) {
+        for (MenuEnum status: MenuEnum.values()) {
             if (status.getKey() == key) {
                 return status;
             }
