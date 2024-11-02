@@ -4,7 +4,7 @@ import javax.xml.namespace.QName;
 
 public class SortedService {
 
-    public void orderEmployeeAscendingSelectionSort(Employee[] employeeList) {
+    public void selectionSortEmployee(Employee[] employeeList) {
 
         if (employeeList == null || employeeList.length == 0) {
             System.out.println("Employee list is empty or null.");

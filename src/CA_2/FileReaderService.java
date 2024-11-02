@@ -18,8 +18,6 @@ public class FileReaderService {
 
         BufferedReader buffRead = new BufferedReader(new InputStreamReader(inputStream));
 
-       // BufferedReader buffRead = new BufferedReader(new FileReader("src/CA_2/Applicants_Form.txt"));
-
         String line = "";
 
         int countLines = 0;
