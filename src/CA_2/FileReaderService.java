@@ -39,12 +39,10 @@ public class FileReaderService {
                 if (parts.length >= 3) {
                     String name = parts[0].replace("\"", "").trim();
                     String role = parts[1].trim();
-                    String manager = parts[2].trim();
-                    String department = parts[3].trim();
+                    String department = parts[2].trim();
 
                     employeeList[i] = new Employee();
                     employeeList[i].setName(name);
-                    employeeList[i].setManager(manager);
                     employeeList[i].setRole(role);
                     employeeList[i].setDepartment(department);
                 }
